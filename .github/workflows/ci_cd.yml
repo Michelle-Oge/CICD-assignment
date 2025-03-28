@@ -57,6 +57,9 @@ jobs:
       - name: List repository files
         run: ls -al
 
+      - name: Debug DOCKERHUB_USERNAME
+        run: echo "DOCKERHUB_USERNAME=${{ secrets.DOCKERHUB_USERNAME }}"
+
       # Step 7: Build Docker Image
       - name: Build Docker Image
         run: |
